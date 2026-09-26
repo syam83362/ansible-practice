@@ -1,0 +1,12 @@
+---
+- name: Learn registerd variables
+  hosts: local
+
+  tasks:
+      - name: Check current user
+        command: whoami
+        register: user_result
+
+      - name: Show the result
+        debug:
+            msg: "current user is {{ user_result.stdout}}"

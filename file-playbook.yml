@@ -1,0 +1,10 @@
+---
+- name: Learn file module
+  hosts: local
+
+  tasks:
+    - name: create application directory
+      file:
+        path: /tmp/myapp
+        state: directory
+        mode: '0755'

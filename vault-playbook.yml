@@ -1,0 +1,11 @@
+---
+- name: Learn ansible vault
+  hosts: local
+
+  vars_files:
+    - secrets.yml
+
+  tasks:
+    - name: Show secret
+      debug:
+       msg: "the secret password {{ db_password }}" 

@@ -1,0 +1,13 @@
+---
+- name: Learn tmeplates
+  hosts: local
+
+  vars: 
+      app_name: Nexows
+      app_port: 4100
+
+  tasks:
+      - name: Generate application config
+        template:
+            src: templates/app.conf.j2
+            dest: /tmp/app.conf

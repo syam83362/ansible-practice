@@ -1,0 +1,10 @@
+---
+- name: Learning services
+  hosts: local
+  become: true
+
+  tasks:
+    - name: Ensure ssh is running
+      service:
+           name: ssh
+           state: started

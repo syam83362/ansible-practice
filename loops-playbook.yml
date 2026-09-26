@@ -1,0 +1,14 @@
+---
+- name: Learn loops
+  hosts: local
+  become: true
+
+  tasks:
+     - name: Install Packages
+       apt:
+          name: "{{ item }}"
+          state: present
+       loop:
+          - curl
+          - git
+          - nginx

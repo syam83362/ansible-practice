@@ -1,0 +1,13 @@
+---
+- name: Learn Ansible variables
+  hosts: local
+  become: true
+
+  vars:
+    package_name: curl
+
+  tasks:
+      - name: Ensure package is installed
+        apt:
+          name: "{{ package_name }}"
+          state: present

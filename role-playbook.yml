@@ -1,0 +1,6 @@
+---
+- name: Learn ansible role
+  hosts: local
+
+  roles:
+    - myapp

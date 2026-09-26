@@ -1,0 +1,9 @@
+---
+- name: Learn copy module
+  hosts: local
+
+  tasks:
+      - name: Copy configuration file
+        copy:
+          src: source.txt
+          dest: /tmp/config.txt

@@ -1,0 +1,10 @@
+---
+- name: Ensure curl is installed
+  hosts: local
+  become: true
+
+  tasks:
+    - name: Install curl
+      apt:
+         name: curl
+         state: present

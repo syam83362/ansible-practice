@@ -1,0 +1,15 @@
+---
+- name: Learn Handlers
+  hosts: local
+
+  tasks:
+     - name: create a file
+       file:
+          path: /tmp/ansible-handler-test
+          state: touch
+       notify: File created
+
+  handlers:
+      - name: File created
+        debug:
+          msg: "The file task changed something, so the handler ran!"

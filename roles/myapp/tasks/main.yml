@@ -1,0 +1,7 @@
+---
+# tasks file for roles/myapp
+- name: Create app directory
+  file:
+    path: /tmp/myapp-role
+    state: directory
+    mode: '0755'

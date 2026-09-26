@@ -1,0 +1,10 @@
+---
+- name: Learning conditions
+  hosts: local
+
+  tasks:
+    - name: Show message for ubuntu
+      debug:
+          msg: "This machine is running Ubuntu"
+      when: ansible_distribution == "Ubuntu"
+

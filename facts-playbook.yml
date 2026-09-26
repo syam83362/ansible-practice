@@ -1,0 +1,12 @@
+---
+- name: Learning facts
+  hosts: local
+
+  tasks:
+     - name: show remote machine os
+       debug:
+         msg: "OS is {{ ansible_distribution}}"
+
+     - name: Show the remote machine Host name
+       debug:
+         msg: "Hostname is {{ ansible_hostname }}"

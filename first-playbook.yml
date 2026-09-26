@@ -1,0 +1,8 @@
+---
+- name: My first playbook 
+  hosts: local
+
+  tasks:
+    - name: check current user
+      command: whoami
+
